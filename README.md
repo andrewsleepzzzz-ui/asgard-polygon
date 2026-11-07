@@ -3,6 +3,11 @@
 External ESP / aimbot for **POLYGON** (Unreal Engine 5.2, EasyAntiCheat), driven by a
 manually-mapped kernel driver instead of a handle-based read/write path.
 
+Based on **[Asgard_Polygon](https://github.com/MrReekoFTWxD/Asgard_Polygon)** by
+**MrReekoFTWxD** — the original external cheat base this fork was built from. All of the
+original ESP/aimbot/ImGui groundwork is his; this fork adapts it to POLYGON, adds the
+kernel driver path and re-derives the offsets for the current build.
+
 > Research / educational project. Use only in your own offline sessions or private
 > servers you are authorised to test. Using it in public matches violates the game's
 > Terms of Service and will get your account banned.
@@ -106,6 +111,9 @@ game update.
 
 ## Credits
 
+* **[MrReekoFTWxD / Asgard_Polygon](https://github.com/MrReekoFTWxD/Asgard_Polygon)** –
+  original project this fork is based on (ESP, aimbot, ImGui menu, `driver` abstraction).
+  Huge thanks for releasing it.
 * [KDMapper](https://github.com/TheCruZ/kdmapper) – manual mapper used to load the driver.
 * [GSpots](https://github.com/Do0ks/GSpots) – UE dump tool used while locating `GWorld` / `GNames`.
 * Dear ImGui – overlay UI.

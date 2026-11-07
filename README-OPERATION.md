@@ -1,4 +1,4 @@
-# Asgard Polygon — 运行说明（UE 5.2 / EAC）
+﻿# Asgard Polygon — 运行说明（UE 5.2 / EAC）
 
 **方案**：KDMapper（`iqvw64e.sys`）映射自研 `PolygonMemory.sys`（含 DKOM 清表）+ `MmCopyVirtualMemory` 读写 + ImGui(D3D9) 外部覆盖层。
 
@@ -110,3 +110,12 @@ F:\dsh\32\Asgard_Polygon-main\
   `actor(0x1000)` / `PlayerState(0x600)` / `HealthComponent(0x400)` / `Mesh(0x800)`
   十六进制写入 `F:\dsh\32\Asgard_Polygon-main\actor_dump.txt`。
 - 游戏更新导致偏移失效时，用它对比"活人 vs 尸体 / 敌人 vs 队友"的字节差异，可快速重新定位。
+---
+
+## 八、鸣谢
+
+- **原始项目：[MrReekoFTWxD / Asgard_Polygon](https://github.com/MrReekoFTWxD/Asgard_Polygon)**
+  —— 本项目的 ESP / 自瞄 / ImGui 菜单 / driver 抽象层全部来自他的开源实现，
+  本仓库只是把目标适配到 POLYGON、改走内核驱动路径并重新推导了当前版本的偏移。非常感谢。
+- [KDMapper](https://github.com/TheCruZ/kdmapper) —— 手动映射驱动。
+- [GSpots](https://github.com/Do0ks/GSpots) —— 定位 `GWorld` / `GNames` 时用的 UE dump 工具。
